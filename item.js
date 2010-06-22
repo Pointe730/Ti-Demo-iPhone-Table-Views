@@ -5,14 +5,18 @@
  * @author Blake Schwendiman <blake.schwendiman@gmail.com>
  */
 
-Titanium.API.debug('in item.js');
+/*
+  A very simple window. This is the view for the item that was clicked in
+  the main table view.
+*/
 
+/*
+  Get the item data from the app properties (stored on row click), then
+  add a few elements to the current window based on that information.
+*/
 var item_data_str = Ti.App.Properties.getString('item_data');
-Ti.API.debug(item_data_str);
 var item_data = JSON.parse(item_data_str);
 var win = Titanium.UI.currentWindow;
-
-Titanium.API.debug(item_data);
 
 win.title = item_data.title;
 win.backgroundColor = '#FFF';
